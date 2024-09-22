@@ -7,6 +7,7 @@ export const WeatherContext = createContext(null);
 export const WeatherProvider = ({children}) => {
     const [weatherData , setWeatherData] = useState(null)
     const [searchCity , setSearchCity] = useState("New Delhi")
+    const [isDegCelsius , setIsDegCelsius] = useState(true)
 
     const getWeatherData = async () => {
        try {
@@ -14,10 +15,12 @@ export const WeatherProvider = ({children}) => {
         setWeatherData(response)
        } catch (error) {
         console.log({error})
+        // alert(error.message)
+        alert("Entered city name is incorrect or there is some network issue. Please try again...")
        }
     }
 
-    return <WeatherContext.Provider value={{weatherData,searchCity,setSearchCity,getWeatherData}}>
+    return <WeatherContext.Provider value={{weatherData,searchCity,setSearchCity,getWeatherData,isDegCelsius,setIsDegCelsius}}>
         {children}
     </WeatherContext.Provider>
 

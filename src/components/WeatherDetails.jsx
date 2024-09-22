@@ -1,14 +1,14 @@
 import useWeather from "../utils/useWeather";
 
 const WeatherDetails = () => {
-  const { weatherData } = useWeather();
+  const { weatherData,isDegCelsius } = useWeather();
 
   return (
     <div className="flex bg-gray-900 p-5 rounded-lg mx-10 h-full shadow-md shadow-slate-600 ">
       <div className="flex-1 flex flex-col p-4 justify-center items-center text-5xl">
-        <p className="text-white  font-bold my-3">{`${weatherData?.current?.temp_c}\u00B0C`}</p>
+        <p className="text-white  font-bold my-3">{isDegCelsius ? `${weatherData?.current?.temp_c}\u00B0C` : `${weatherData?.current?.temp_f}\u00B0F`}</p>
         <p className="text-gray-400 text-lg">
-          Feels like: {`${weatherData?.current?.feelslike_c}\u00B0C`}
+          Feels like: {isDegCelsius ? `${weatherData?.current?.feelslike_c}\u00B0C` : `${weatherData?.current?.feelslike_f}\u00B0F` }
         </p>
       </div>
       <div className="flex-1  p-4">

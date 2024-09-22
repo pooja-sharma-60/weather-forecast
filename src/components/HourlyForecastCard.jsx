@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
 import extractDateTime from "../utils/extractDateTime"
+import useWeather from "../utils/useWeather"
 
 
 const HourlyForecastCard = ({data}) => {
-
+  const {isDegCelsius} = useWeather()
 
     const {time} = extractDateTime(data?.time)
     console.log(time)
@@ -13,7 +14,7 @@ const HourlyForecastCard = ({data}) => {
         <div className="flex items-center justify-center">
             <img src={data?.condition?.icon} alt="weather-icon"/> 
         </div>
-        <div className="text-xl font-bold">{`${data?.temp_c}\u00B0C`}</div>
+        <div className="text-xl font-bold">{isDegCelsius ? `${data?.temp_c}\u00B0C` : `${data?.temp_f}\u00B0F`}</div>
         <div>Humidity: {data?.humidity}%</div>
         <div className="font-thin">Wind: {data?.wind_kph}kph</div>
     </div>

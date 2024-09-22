@@ -4,6 +4,10 @@ import useWeather from "../utils/useWeather"
 const SearchBox = () => {
     const {searchCity , setSearchCity , getWeatherData} = useWeather()
     const handleInput = () => {
+      if(searchCity === ""){
+        alert("enter a city name")
+        return ;
+      }
       getWeatherData();
       setSearchCity("")
     }
