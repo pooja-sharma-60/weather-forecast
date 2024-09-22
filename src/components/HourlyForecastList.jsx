@@ -10,7 +10,7 @@ const HourlyForecastList = () => {
     const filteredHours = hour.filter((_,index) => (index % 3 === 0 && index > 8 && index < 22))
     
   return (
-    <div className="bg-gray-900 text-white p-6 rounded-lg mx-10 h-full shadow-md shadow-slate-600">
+    <div className="bg-gray-800 text-white p-6 rounded-lg mx-10 h-full shadow-xl shadow-slate-900">
         <h2 className="text-2xl">Hourly Forecast: </h2>
     <div className="flex justify-between items-stretch">{filteredHours.map((hourData,index) => <HourlyForecastCard key={index} data={hourData}/>)}</div>
     </div>

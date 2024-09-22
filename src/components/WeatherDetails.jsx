@@ -4,7 +4,7 @@ const WeatherDetails = () => {
   const { weatherData,isDegCelsius } = useWeather();
 
   return (
-    <div className="flex bg-gray-900 p-5 rounded-lg mx-10 h-full shadow-md shadow-slate-600 ">
+    <div className="flex bg-gray-800 p-5 rounded-lg mx-10 h-full shadow-xl shadow-slate-900 ">
       <div className="flex-1 flex flex-col p-4 justify-center items-center text-5xl">
         <p className="text-white  font-bold my-3">{isDegCelsius ? `${weatherData?.current?.temp_c}\u00B0C` : `${weatherData?.current?.temp_f}\u00B0F`}</p>
         <p className="text-gray-400 text-lg">

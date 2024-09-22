@@ -9,7 +9,7 @@ const LocationCard = () => {
     
     console.log(weatherData)
   return (
-    <div className="bg-gray-900 text-white p-6 rounded-lg mx-10 h-full flex flex-col justify-center items-center shadow-md shadow-slate-600 ">
+    <div className="bg-gray-800 text-white p-6 rounded-lg mx-10 h-full flex flex-col justify-center items-center shadow-xl shadow-slate-900 ">
     <div className="text-center mb-4">
       <h2 className="text-2xl font-semibold">{weatherData?.location?.name}</h2>
     </div>
