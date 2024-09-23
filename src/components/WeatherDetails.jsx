@@ -6,7 +6,7 @@ const WeatherDetails = () => {
   return (
     <div className="flex bg-gray-800 p-5 rounded-lg mx-10 my-5 md:my-0 h-full shadow-xl shadow-slate-900 flex-wrap">
       <div className="flex flex-col p-4 justify-center items-center text-5xl w-1/2 xl:w-1/3">
-        <p className="text-white  font-bold my-3">{isDegCelsius ? `${weatherData?.current?.temp_c}\u00B0C` : `${weatherData?.current?.temp_f}\u00B0F`}</p>
+        <p className="text-white sm:font-bold my-3">{isDegCelsius ? `${weatherData?.current?.temp_c}\u00B0C` : `${weatherData?.current?.temp_f}\u00B0F`}</p>
         <p className="text-gray-400 text-lg">
           Feels like: {isDegCelsius ? `${weatherData?.current?.feelslike_c}\u00B0C` : `${weatherData?.current?.feelslike_f}\u00B0F` }
         </p>
@@ -22,13 +22,13 @@ const WeatherDetails = () => {
         </p>
       </div>
       <div className="w-full p-4 xl:w-1/3">
-        <div className="grid  grid-cols-4 xl:grid-cols-2 gap-4 mt-4 text-white">
+        <div className="grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-2 gap-4 mt-4 text-white">
           {/* Humidity */}
           <div className="flex flex-col items-center">
             <img
               src="src/assets/humidity.png"
               alt="Humidity Icon"
-              className="w-1/3"
+              className="w-1/6 sm:w-1/3"
             />
             <span>{weatherData?.current?.humidity}%</span>
             <span>Humidity</span>
@@ -39,7 +39,7 @@ const WeatherDetails = () => {
             <img
               src="src/assets/wind.png"
               alt="Wind Speed Icon"
-              className="w-1/3"
+              className="w-1/6 sm:w-1/3"
             />
             <span>{weatherData?.current?.wind_kph} kph</span>
             <span>Wind </span>
@@ -50,7 +50,7 @@ const WeatherDetails = () => {
             <img
               src="src/assets/pressure.png"
               alt="Pressure Icon"
-              className="w-1/3"
+              className="w-1/6 sm:w-1/3"
             />
             <span>{weatherData?.current?.pressure_mb} mb</span>
             <span>Pressure</span>
@@ -60,7 +60,7 @@ const WeatherDetails = () => {
             <img
               src="src/assets/uv.png"
               alt="Pressure Icon"
-              className="w-1/3"
+              className="w-1/6 sm:w-1/3"
             />
             <span>{weatherData?.current?.uv}</span>
             <span>UV</span>
