@@ -1,6 +1,5 @@
 import useWeather from "../utils/useWeather"
 
-
 const SearchBox = () => {
     const {searchCity , setSearchCity , getWeatherData} = useWeather()
     const handleInput = () => {

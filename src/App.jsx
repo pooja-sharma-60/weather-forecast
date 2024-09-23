@@ -19,19 +19,19 @@ function App() {
       <Header />
       {weatherData ? (
         <div>
-          <div className="flex my-5 ">
-            <div className="w-2/5 ">
+          <div className="flex my-5 flex-wrap">
+            <div className="w-full md:w-2/5 md:my-2 ">
               <LocationCard />
             </div>
-            <div className="w-3/5 ">
+            <div className="w-full md:w-3/5 ">
               <WeatherDetails />
             </div>
           </div>
-          <div className="flex my-5 ">
-            <div className="w-1/3 ">
+          <div className="flex my-5 flex-wrap">
+            <div className="w-full my-5 lg:w-1/3 md:my-2 ">
              <ForecastList />
             </div>
-            <div className="w-2/3">
+            <div className="w-full lg:w-2/3 md:my-2">
               <HourlyForecastList />
             </div>
           </div>
