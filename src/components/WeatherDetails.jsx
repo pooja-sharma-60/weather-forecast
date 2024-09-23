@@ -26,7 +26,7 @@ const WeatherDetails = () => {
           {/* Humidity */}
           <div className="flex flex-col items-center">
             <img
-              src="src/assets/humidity.png"
+              src="https://res.cloudinary.com/dimgnbjdp/image/upload/v1727088288/humidity_p2pahg.png"
               alt="Humidity Icon"
               className="w-1/6 sm:w-1/3"
             />
@@ -37,7 +37,7 @@ const WeatherDetails = () => {
           {/* Wind Speed */}
           <div className="flex flex-col items-center">
             <img
-              src="src/assets/wind.png"
+              src="https://res.cloudinary.com/dimgnbjdp/image/upload/v1727088288/wind_anfy3s.png"
               alt="Wind Speed Icon"
               className="w-1/6 sm:w-1/3"
             />
@@ -48,7 +48,7 @@ const WeatherDetails = () => {
           {/* Pressure */}
           <div className="flex flex-col items-center">
             <img
-              src="src/assets/pressure.png"
+              src="https://res.cloudinary.com/dimgnbjdp/image/upload/v1727088289/pressure_nxxvnv.png"
               alt="Pressure Icon"
               className="w-1/6 sm:w-1/3"
             />
@@ -58,7 +58,7 @@ const WeatherDetails = () => {
           {/* UV */}
           <div className="flex flex-col items-center">
             <img
-              src="src/assets/uv.png"
+              src="https://res.cloudinary.com/dimgnbjdp/image/upload/v1727088289/uv_u70ajz.png"
               alt="Pressure Icon"
               className="w-1/6 sm:w-1/3"
             />
